@@ -191,9 +191,9 @@ const Days = ({
   const getPadding = (day: number) => (browsingDate.set("date", day).day() - weekStart + 7) % 7;
   const totalDays = daysInMonth(browsingDate);
 
-  const showNextMonthDays = isSecondWeekOver && !isCompact;
+  const showNextMonthDays = isSecondWeekOver;
 
-  // Only apply end-of-month logic for main monthly view (not compact sidebar)
+  // Apply end-of-month logic to all calendar views
   if (showNextMonthDays) {
     const startDay = 8;
     const pad = getPadding(startDay);
