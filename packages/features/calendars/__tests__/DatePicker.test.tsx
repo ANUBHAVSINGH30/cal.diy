@@ -202,7 +202,6 @@ describe("Tests for DatePicker Component", () => {
 
       const dayElements = getAllByTestId("day");
 
-      // Should preserve the current month's dates and include trailing next-month dates
       const firstDayOfMonth = dayElements.find((day) => day.textContent === "1");
       expect(firstDayOfMonth).toBeTruthy();
       expect(dayElements.slice(-3).map((day) => day.textContent?.trim())).toEqual(["1", "2", "3"]);
